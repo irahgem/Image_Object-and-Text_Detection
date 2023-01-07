@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            crossorigin="anonymous"
+        />
+
+        <title>{% block title %}Home{% endblock %}</title>
+    </head>
+    
+    <body>
+        <div class='container'>
+            <h2 class = 'col-6 mx-auto mt-5 text-center' align='center'>Object Text Detection</h2>
+            <form method = 'POST' enctype='multipart/form-data'>
+                {{ form.hidden_tag() }}
+
+                {% for error in form.photo.errors %}
+                    <span style='color: red;'>{{ error }}</span>
+                {% endfor %}
+
+                <br />
+                <div class='row justify-content-center'>
+                    <div class='col-auto'>
+                        {{ form.photo(class='form-control') }}
+                    </div>
+                    <div class = 'col-auto'>
+                        <button type='upload' class='btn btn-primary'>Upload</button>
+
+                    </div>
+                </div>
+            </form>
+
+            {% if file_url %}
+                <div class='mt-5'>
+                    <img src = '{{ file_url }}' align = 'left' style='width: 400px;'>
+                    
+                </div>
+            {% endif %}
+
+            {% if detect_file_url %}
+                <div class='mt-5'>
+                    <img src = '{{ detect_file_url }}' align = 'right' style='width: 400px;'>
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
