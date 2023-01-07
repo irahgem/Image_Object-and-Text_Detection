@@ -11,3 +11,21 @@ Object Text Detection is the process of detecting and extracting both objects an
 - Click on the local host which redirects to the web application
 - Choose image file (JPEG images are allowed as of now).
 - Click Upload to Detect Object and Text from the Image.
+
+## Demo
+
+1. Front Page
+
+![Front_page](https://user-images.githubusercontent.com/72067722/211159147-f908c66d-d990-4fec-aae2-1eebc7f2db59.png)
+
+2. Original Image
+
+![original_image](https://user-images.githubusercontent.com/72067722/211159231-feb69b23-fcf5-4ec5-8dbb-240a111e1cf0.jpg)
+
+3. Detected Image
+
+![Detected_image](https://user-images.githubusercontent.com/72067722/211159340-42871b97-f508-494a-b458-4b13ca75244d.png)
+
+4. Displaying Results
+
+![Displaying_results](https://user-images.githubusercontent.com/72067722/211159379-4f7ac9d5-0664-4bc8-be56-63fb2ef01f9b.png)
